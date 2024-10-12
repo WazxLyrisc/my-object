@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Users</title>
+</head>
+<body>
+
+    <h1>Danh sách User</h1>
+    <ul id="user-list"></ul>
+
+    <script>
+        // Hàm để hiển thị danh sách users lên DOM
+        function hienThiUsers() {
+            let userList = document.getElementById('user-list');
+            userList.innerHTML = ''; // Xóa nội dung hiện tại
+
+            users.forEach(user => {
+                let li = document.createElement('li');
+                li.textContent = `ID: ${user.id}, Tên: ${user.ten}`;
+                if (user.diaChi) {
+                    li.textContent += `, Địa chỉ: ${user.diaChi.tinh}, ${user.diaChi.thanhPho}`;
+                }
+                if (user.email) {
+                    li.textContent += `, Email: ${user.email}`;
+                }
+                userList.appendChild(li);
+            });
+        }
+
+        // Hiển thị danh sách ban đầu
+        hienThiUsers();
+    </script>
+
+</body>
+</html>

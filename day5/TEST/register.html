@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!--Câu hỏi trắc nghiệm
+        C1:A    C6:A   
+        C2:B    C7:A
+        C3:D    C8:A
+        C4:A    C9:B
+        C5:D    C10:A  -->
+    <script src="register.js"></script>
+    <div>
+    <h1>Đăng kí</h1>
+    <label for="ten">Tên:</label>
+    <input type="text" id="ten" placeholder="Tên">
+        </div>
+    <div>
+    <label for="tuoi">Tuổi:</label>
+    <input type="number" id="tuoi" placeholder="Tuổi">
+        </div>
+    <div>
+    <label for="date">D.O.B</label>
+    <input type="date" id="date">           
+        </div>
+    <div>
+    <label for="gender">Giới tính:</label>
+    <select name="gender" id="gender">
+        <option value="male">Nam</option>
+        <option value="female">Nữ</option>
+    </select>
+    </div>
+    <div>
+    <h4>Email:</h4>
+    <input type="email" id="email" placeholder="Nhập email của bạn">
+        </div>
+    <div>
+    <button onclick="luuThongTin()">Đăng ký</button>
+        </div>
+</body>
+</html>
